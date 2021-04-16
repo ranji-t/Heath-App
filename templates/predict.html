@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}
+    Health APP | Predict!
+{% endblock title %}
+
+{% block content %}
+    {% if y_pred == 0 %}
+        <div align='center'>
+            <h1>Prediction Result</h1>
+            <p>y_pred = {{ y_pred }}</p>
+            <h2>No-Show</h2>
+        </div>
+    {% elif y_pred == 1 %}
+        <div align='center'></div>
+            <h1>Prediction Result</h1>
+            <p>y_pred = {{ y_pred }}</p>
+            <h2>Show-UP</h2>
+        
+    {% else %}
+        <h1 align='center'>Prediction Form</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+
+            {{ form.Age.label(class='from-label') }}</br>
+            {{ form.Age(class_="form-control") }}</br></br>
+            
+            {{ form.Gender.label(class='from-label') }}</br>
+            {{ form.Gender(class='form-control') }}</br></br>
+
+            {{ form.DayOfTheWeek.label(class='from-label') }}</br>
+            {{ form.DayOfTheWeek(class='form-control') }}</br></br>
+
+            {{ form.Diabetes.label(class='from-label') }}</br>
+            {{ form.Diabetes(class='form-control') }}</br></br>
+
+            {{ form.Alcoholism.label(class='from-label') }}</br>
+            {{ form.Alcoholism(class='form-control') }}</br></br>
+
+            {{ form.HyperTension.label(class='from-label') }}</br>
+            {{ form.HyperTension(class='form-control') }}</br></br>
+
+            {{ form.Handicap.label(class='from-label') }}</br>
+            {{ form.Handicap(class='form-control') }}</br></br>
+
+            {{ form.Smokes.label(class='from-label') }}</br>
+            {{ form.Smokes(class='form-control') }}</br></br>
+
+            {{ form.Scholarship.label(class='from-label') }}</br>
+            {{ form.Scholarship(class='form-control') }}</br></br>
+
+            {{ form.Tuberculosis.label(class='from-label') }}</br>
+            {{ form.Tuberculosis(class='form-control') }}</br></br>
+
+            {{ form.Sms_Reminder.label(class='from-label') }}</br>
+            {{ form.Sms_Reminder(class='form-control') }}</br></br>
+
+            {{ form.AwaitingTime.label(class='from-label') }}</br>
+            {{ form.AwaitingTime(class='form-control') }}</br></br>
+
+            {{ form.HourOfTheDay.label(class='from-label') }}</br>
+            {{ form.HourOfTheDay(class='form-control') }}</br></br>
+
+            {{ form.Submit(class='btn btn-secondary btn-lg') }}</br></br></br>
+        </form>
+    {% endif %}
+{% endblock content %}
