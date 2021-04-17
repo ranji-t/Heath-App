@@ -4,5 +4,100 @@
 {% endblock title %}
 
 {% block content %}
-    <br><h1 align="center">The Health APP</h1>
+    <br><h1 align="center"><b>The Health APP</b></h1><br>
+    <div align="justify">
+        <h2><b>Context</b></h2>
+        <p>
+            A person makes a doctor appointment, receives all the instructions and no-show. Who to blame?
+        </p>
+
+        <h2><b>Problem Statement:</b></h2>
+        <p>
+            300k medical appointments and its 15 variables (characteristics) of each. The most important one if the patient show-up or no-show the appointment. Variable names are self-explanatory
+        </p><br>
+
+        <h2><b>Dataset Description:</b></h2>
+        <table>
+            <tr>
+                <th>Field Title</th>
+                <th>Field Desctiption</th>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>Identification of a patient AppointmentID - Identification of each appointment</td>
+            </tr>
+            <tr>
+                <td>PatientId</td>
+                <td>Male or Female . Female is the greater proportion; woman takes way more care of their health in comparison to man.</td>
+            </tr>
+            <tr>
+                <td>DataMarcacaoConsulta</td>
+                <td>The day of the actual appointment, when they have to visit the doctor</td>
+            </tr>
+            <tr>
+                <td>DataAgendamento</td>
+                <td>The day someone called or registered the appointment, this is before appointment of course</td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>How old is the patient</td>
+            </tr>
+            <tr>
+                <td>Neighbourhood</td>
+                <td>Where the appointment takes place</td>
+            </tr>
+            <tr>
+                <td>Scholarship</td>
+                <td>Ture or False observation. This is a broad topic, consider reading this article https://en.wikipedia.org/wiki/Bolsa_Fam%C3%ADlia</td>
+            </tr>
+            <tr>
+                <td>Hipertension</td>
+                <td>True or False</td>
+            </tr>
+            <tr>
+                <td>Diabetes</td>
+                <td>True or False</td>
+            </tr>
+            <tr>
+                <td>Alcoholism</td>
+                <td>True or False</td>
+            </tr>
+            <tr>
+                <td>Handcap</td>
+                <td>True or False</td>
+            </tr>
+            <tr>
+                <td>SMS_received</td>
+                <td>1 or more messages sent to the patient</td>
+            </tr>
+            <tr>
+                <td>No-show</td>
+                <td>True or False</td>
+            </tr>
+        </table>
+
+        <h2><b>Approach </b></h2>
+        <p>Following pointers will be helpful to structure your findings.</p>
+        <ol>
+            <li>Try and explore the data to check for missing values/erroneous entries and also comment on redundant features and add additional ones, if needed.</li>
+            <li>It is immediately apparent that some of the column names have typos, so let us clear them up before continuing further, so that we don't have to use alternate spellings every time we need a variable.</li>
+            <li>It is immediately apparent that some of the column names have typos, so let us clear them up before continuing further, so that we don't have to use alternate spellings every time we need a variable.</li>
+            <li>Create a new feature called HourOfTheDay, which will indicate the hour of the day at which the appointment was booked.</li>
+            <li>Identify and remove outliers from Age. Explain using an appropriate plot.</li>
+            <li>Analyse the probability of showing up with respect to different features. Create scatter plot and trend lines to analyse the relation between probability of showing up with respect to age/Houroftheday/awaitingtime. Describe your finding.</li>
+            <li>Create a bar graph to depict probability of showing up for diabetes, alcoholism, hypertension, TB, smokes, scholarship.</li>
+            <li>Create separate bar graphs to show the probability of showing up for male and female, day of the week and sms reminder. Describe your interpretation.
+            <li>Predict the Show-Up/No-Show status based on the features which show the most variation in probability of showing up. They are:</li>
+                <ul>
+                    <li>Age</li>
+                    <li>Diabete</li>
+                    <li>Alchoholism</li>
+                    <li>Hypertension</li>
+                    <li>Smokes</li>
+                    <li>Tuberculosis</li>
+                </ul>
+            </li>
+            <li>Create a dashboard in tableau by choosing appropriate chart types and metrics useful for the business.</li>
+        </ol>
+    </div>
 {% endblock content %}
