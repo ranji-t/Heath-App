@@ -28,6 +28,7 @@ importlib-metadata==3.10.0
 ipykernel==5.4.2
 ipython==7.19.0
 ipython-genutils==0.2.0
+ipywidgets==7.5.1
 itsdangerous==1.1.0
 jedi==0.18.0
 Jinja2==2.11.3
@@ -81,6 +82,8 @@ pywin32==300
 pywinpty==0.5.7
 PyYAML==5.4.1
 pyzmq==20.0.0
+qtconsole==4.7.7
+QtPy==1.9.0
 requests==2.25.1
 scikit-image==0.16.2
 scikit-learn==0.24.1
@@ -102,6 +105,7 @@ wcwidth==0.2.5
 webencodings==0.5.1
 Werkzeug==1.0.1
 wheel==0.36.2
+widgetsnbextension==3.5.1
 win-inet-pton==1.1.0
 wincertstore==0.2
 WTForms==2.3.3
