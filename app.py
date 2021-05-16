@@ -178,7 +178,7 @@ def predict():
         }
     
         IN_PUT = DataFrame(Form_DICT, index=[0])
-        ML_Model = load(r'Model\fModel.joblib')
+        ML_Model = load(r'Model\health_final_model_.joblib')
         y_pred = ML_Model.predict(IN_PUT)[-1]
         
 
